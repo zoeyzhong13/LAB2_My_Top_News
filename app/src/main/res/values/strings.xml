@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LAB2_My_Top_News</string>
+    <string name="Business">Business</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="Health">Health</string>
+    <string name="Science">Science</string>
+    <string name="Sports">Sports</string>
+
+</resources>
