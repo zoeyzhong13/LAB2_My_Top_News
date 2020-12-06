@@ -34,19 +34,17 @@ public class NavigateAdapter extends RecyclerView.Adapter<NavigateAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
-        View view = LayoutInflater.from(parent.getContex())
+        View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.navigate_item,parent,false);
         ViewHolder holder=new ViewHolder(view);
         return holder;
     }
 
-
-
     @Override
-    public void onBindViewHolder(ViewHolder holder,int position){
-        Navigate navigate=mNavigateList.get(position);
-        holder.navigateImage.setImageResource(navigate.getImageId());
-        holder.navigateName.setText(navigate.getName());
+    public void onBindViewHolder(ViewHolder holder,final int position){
+        final  Navigate navigate=mNavigateList.get(position);
+        holder.NavigateImage.setImageResource(navigate.getImageId());
+        holder.NavigateName.setText(navigate.getName());
     }
 
     @Override
