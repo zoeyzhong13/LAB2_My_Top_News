@@ -1,5 +1,7 @@
 package com.example.lab2_my_top_news;
 
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ public class NavigateAdapter extends RecyclerView.Adapter<NavigateAdapter.ViewHo
         mNavigateList=navigateList;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
         View view = LayoutInflater.from(parent.getContex())
@@ -37,11 +40,7 @@ public class NavigateAdapter extends RecyclerView.Adapter<NavigateAdapter.ViewHo
         return holder;
     }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
-    }
+
 
     @Override
     public void onBindViewHolder(ViewHolder holder,int position){
