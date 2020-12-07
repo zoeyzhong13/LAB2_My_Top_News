@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class EntertainmentActivity extends AppCompatActivity {
 
     private List<Navigate> navigateList=new ArrayList<>();
     private List<News> newsList=new ArrayList<>();
@@ -38,26 +38,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=null;
                 switch (position){
                     case 0:
-                        intent = new Intent(MainActivity.this, MainActivity.class);
+                        intent = new Intent(EntertainmentActivity.this, MainActivity.class);
                         break;
                     case 1:
-                        intent=new Intent(MainActivity.this,EntertainmentActivity.class);
-//                        break;
+                        intent=new Intent(EntertainmentActivity.this,EntertainmentActivity.class);
+          //              break;
 //                    case 2:
-//                        intent=new Intent(MainActivity.this,HealthActivity.class);
+//                        intent=new Intent(EntertainmentActivity.this,HealthActivity.class);
 //                        break;
 //                    case 3:
-//                        intent=new Intent(MainActivity.this,ScienceActivity.class);
+//                        intent=new Intent(EntertainmentActivity.this,ScienceActivity.class);
 //                        break;
 //                    case 4:
-//                        intent=new Intent(MainActivity.this,SportsActivity.class);
+//                        intent=new Intent(EntertainmentActivity.this,SportsActivity.class);
                 }
 
                 startActivity(intent);
             }
         });
 
-        NewsAdapter adapter2=new NewsAdapter(MainActivity.this, R.layout.news_item,newsList);
+        NewsAdapter adapter2=new NewsAdapter(EntertainmentActivity.this, R.layout.news_item,newsList);
         final ListView listView=(ListView)findViewById(R.id.list_view1);
         listView.setAdapter(adapter2);
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent=null;
 //                switch (position){
 //                    case 0:
-//                        intent=new Intent(MainActivity.this,Businessweb1Activity.class);
+//                        intent=new Intent(EntertainmentActivity.this,newsweb1.class);
 //                        break;
 //                    case 1:
-//                        intent=new Intent(MainActivity.this,Businessweb2Activity.class);
+//                        intent=new Intent(EntertainmentActivity.this,newsweb2.class);
 //                        break;
 //                    case 2:
-//                        intent=new Intent(MainActivity.this,Businessweb3Activity.class);
+//                        intent=new Intent(EntertainmentActivity.this,newsweb3.class);
 //                }
 //            }
 //        });

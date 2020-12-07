@@ -15,4 +15,5 @@ public class News {
     public int getImageId(){
         return imageId;
     }
+
 }
