@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private List<Navigate> navigateList=new ArrayList<>();
+    private List<News> newsList=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +25,48 @@ public class MainActivity extends AppCompatActivity {
         initNavigates();
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
         NavigateAdapter adapter=new NavigateAdapter(navigateList);
         recyclerView.setAdapter(adapter);
+        adapter.setOnItemClick(new NavigateAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View v, int position, String id) {
+                Intent intent=null;
+                switch (position){
+                    case 0:
+                        intent = new Intent(MainActivity.this, MainActivity.class);
+                        break;
+                    case 1:
+                        intent=new Intent(MainActivity.this,EntertainmentActivity.class);
+                        break;
+                    case 2:
+                        intent=new Intent(MainActivity.this,HealthActivity.class);
+                        break;
+                    case 3:
+                        intent=new Intent(MainActivity.this,ScienceActivity.class);
+                        break;
+                    case 4:
+                        intent=new Intent(MainActivity.this,SportsActivity.class);
+                }
+
+                startActivity(intent);
+            }
+
+        });
+
+        iniNews();
+        NewsAdapter adapter2=new NewsAdapter(MainActivity.this, R.layout.news_item,newsList);
+        final ListView listView=(ListView)findViewById(R.id.list_view1);
+        listView.setAdapter(adapter2);
+
+    }
+
+    private void initNews(){
+        News new1 = new News("特朗普：我不想等到2024年，我想三周后就去白宫就职",R.drawable.business_1);
+        newsList.add(new1);
+        News new2 =new News("中国嫦娥“奔月”，崔娃“暴露”了",R.drawable.business_2);
+        newsList.add(new2);
     }
 
     private void initNavigates(){
@@ -38,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         navigateList.add(science);
         Navigate sports= new Navigate("Sports",R.drawable.sports);
         navigateList.add(sports);
-
     }
 
 }
