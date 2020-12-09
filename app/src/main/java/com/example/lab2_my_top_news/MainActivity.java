@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         intent=new Intent(MainActivity.this,EntertainmentActivity.class);
-//                        break;
+                        break;
 //                    case 2:
 //                        intent=new Intent(MainActivity.this,HealthActivity.class);
 //                        break;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 //                        break;
 //                    case 4:
 //                        intent=new Intent(MainActivity.this,SportsActivity.class);
-                }
+            }
 
                 startActivity(intent);
             }
@@ -60,23 +60,23 @@ public class MainActivity extends AppCompatActivity {
         NewsAdapter adapter2=new NewsAdapter(MainActivity.this, R.layout.news_item,newsList);
         final ListView listView=(ListView)findViewById(R.id.list_view1);
         listView.setAdapter(adapter2);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                News news =newsList.get(position);
-//                Intent intent=null;
-//                switch (position){
-//                    case 0:
-//                        intent=new Intent(MainActivity.this,Businessweb1Activity.class);
-//                        break;
-//                    case 1:
-//                        intent=new Intent(MainActivity.this,Businessweb2Activity.class);
-//                        break;
-//                    case 2:
-//                        intent=new Intent(MainActivity.this,Businessweb3Activity.class);
-//                }
-//            }
-//        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                News news =newsList.get(position);
+                Intent intent=null;
+                switch (position){
+                    case 0:
+                        intent=new Intent(MainActivity.this,Businessweb1Activity.class);
+                        break;
+                    case 1:
+                        intent=new Intent(MainActivity.this,Businessweb2Activity.class);
+                        break;
+                    case 2:
+                        intent=new Intent(MainActivity.this,Businessweb3Activity.class);
+                }
+            }
+        });
 
     }
 

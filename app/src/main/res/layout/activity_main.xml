@@ -7,7 +7,7 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="#2F9BEC"
+        android:background="#521aff"
         android:scrollbars="horizontal"
         android:fadeScrollbars="false"
         android:scrollbarFadeDuration="0"
