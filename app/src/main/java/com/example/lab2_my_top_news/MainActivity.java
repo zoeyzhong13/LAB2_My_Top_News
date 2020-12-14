@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -43,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         intent=new Intent(MainActivity.this,EntertainmentActivity.class);
                         break;
-//                    case 2:
-//                        intent=new Intent(MainActivity.this,HealthActivity.class);
-//                        break;
-//                    case 3:
-//                        intent=new Intent(MainActivity.this,ScienceActivity.class);
-//                        break;
-//                    case 4:
-//                        intent=new Intent(MainActivity.this,SportsActivity.class);
+                    case 2:
+                        intent=new Intent(MainActivity.this,HealthActivity.class);
+                        break;
+                    case 3:
+                        intent=new Intent(MainActivity.this,ScienceActivity.class);
+                        break;
+                    case 4:
+                        intent=new Intent(MainActivity.this,SportsActivity.class);
             }
 
                 startActivity(intent);
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (position){
                     case 0:
                         intent=new Intent(MainActivity.this,Businessweb1Activity.class);
+                        Log.d("MainActivity", "onItemClick: Businesswebview");
                         break;
                     case 1:
                         intent=new Intent(MainActivity.this,Businessweb2Activity.class);
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         intent=new Intent(MainActivity.this,Businessweb3Activity.class);
                 }
+                startActivity(intent);
             }
         });
 

@@ -6,6 +6,6 @@
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/businessweb3_view"/>
+        android:id="@+id/entertainmentweb3_view"/>
 
 </LinearLayout>

@@ -6,15 +6,15 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class Businessweb3Activity extends AppCompatActivity {
+public class Entertainmentweb3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_businessweb3);
-        WebView webView=(WebView) findViewById(R.id.businessweb3_view);
+        setContentView(R.layout.activity_entertainmentweb3);
+        WebView webView=(WebView) findViewById(R.id.entertainmentweb3_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://money.163.com/20/1207/11/FT8874VC00259DLP.html");
+        webView.loadUrl("https://dy.163.com/article/FSTUQ5I30514R9P4.html");
     }
 }

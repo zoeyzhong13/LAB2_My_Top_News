@@ -15,7 +15,7 @@ package com.example.lab2_my_top_news;
         import java.util.ArrayList;
         import java.util.List;
 
-public class EntertainmentActivity extends AppCompatActivity {
+public class HealthActivity extends AppCompatActivity {
 
     private List<Navigate> navigateList=new ArrayList<>();
     private List<News> newsList=new ArrayList<>();
@@ -38,26 +38,26 @@ public class EntertainmentActivity extends AppCompatActivity {
                 Intent intent=null;
                 switch (position){
                     case 0:
-                        intent = new Intent(EntertainmentActivity.this, MainActivity.class);
+                        intent = new Intent(HealthActivity.this, MainActivity.class);
                         break;
                     case 1:
-                        intent=new Intent(EntertainmentActivity.this,EntertainmentActivity.class);
+                        intent=new Intent(HealthActivity.this,EntertainmentActivity.class);
                         break;
                     case 2:
-                        intent=new Intent(EntertainmentActivity.this,HealthActivity.class);
+                        intent=new Intent(HealthActivity.this,HealthActivity.class);
                         break;
                     case 3:
-                        intent=new Intent(EntertainmentActivity.this,ScienceActivity.class);
+                        intent=new Intent(HealthActivity.this,ScienceActivity.class);
                         break;
                     case 4:
-                        intent=new Intent(EntertainmentActivity.this,SportsActivity.class);
+                        intent=new Intent(HealthActivity.this,SportsActivity.class);
                 }
 
                 startActivity(intent);
             }
         });
 
-        NewsAdapter adapter2=new NewsAdapter(EntertainmentActivity.this, R.layout.news_item,newsList);
+        NewsAdapter adapter2=new NewsAdapter(HealthActivity.this, R.layout.news_item,newsList);
         final ListView listView=(ListView)findViewById(R.id.list_view1);
         listView.setAdapter(adapter2);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,13 +67,13 @@ public class EntertainmentActivity extends AppCompatActivity {
                 Intent intent=null;
                 switch (position){
                     case 0:
-                        intent=new Intent(EntertainmentActivity.this,Entertainmentweb1Activity.class);
+                        intent=new Intent(HealthActivity.this,Healthweb1Activity.class);
                         break;
                     case 1:
-                        intent=new Intent(EntertainmentActivity.this,Entertainmentweb2Activity.class);
+                        intent=new Intent(HealthActivity.this,Healthweb2Activity.class);
                         break;
                     case 2:
-                        intent=new Intent(EntertainmentActivity.this,Entertainmentweb3Activity.class);
+                        intent=new Intent(HealthActivity.this,Healthweb3Activity.class);
                 }
                 startActivity(intent);
             }
@@ -97,11 +97,11 @@ public class EntertainmentActivity extends AppCompatActivity {
     }
 
     private void initNews(){
-        News new1 = new News("云冈石窟的皇帝大佛：从鲜卑王到中国皇帝",R.drawable.entertainment_1);
+        News new1 = new News("武汉新冠康复者：病毒并不可怕，可怕的是歧视、误解和谣言",R.drawable.health_1);
         newsList.add(new1);
-        News new2 =new News("来天鹅之城 享摄影盛宴 第十三届中国摄影艺术节将在三门峡举办",R.drawable.entertainment_2);
+        News new2 =new News("有一种「酷刑」，是听指甲刮黑板的声音",R.drawable.health_2);
         newsList.add(new2);
-        News new3=new News("专访丨克莱尔·西蒙：不带预设视角，拍纪录片才更无拘无束",R.drawable.entertainment_3);
+        News new3=new News("我们常吃的加工肉，为什么是一类致癌物？",R.drawable.health_3);
         newsList.add(new3);
     }
 

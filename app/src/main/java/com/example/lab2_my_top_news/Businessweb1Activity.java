@@ -1,10 +1,10 @@
 package com.example.lab2_my_top_news;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+        import android.os.Bundle;
+        import android.webkit.WebView;
+        import android.webkit.WebViewClient;
 
 public class Businessweb1Activity extends AppCompatActivity {
 

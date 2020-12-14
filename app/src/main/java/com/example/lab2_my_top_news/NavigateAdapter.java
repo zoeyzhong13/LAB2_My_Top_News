@@ -1,17 +1,17 @@
 package com.example.lab2_my_top_news;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.AdapterView.OnItemClickListener;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
+        import androidx.annotation.NonNull;
+        import androidx.recyclerview.widget.RecyclerView;
+        import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
-import java.util.List;
+        import java.util.List;
 
 public class NavigateAdapter extends RecyclerView.Adapter<NavigateAdapter.ViewHolder> {
 
